@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    background: linear-gradient(#87ceeb, #e0f6ff);
+    border-bottom: 5vw solid #00ff00;
+    overflow: hidden; /* Oculta as barras de rolagem */
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 8vw;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.mario {
+    width: 15vw;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.clouds {
+    position: absolute;
+    width: 55vw;
+    animation: clouds-animation 20s infinite linear;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -8vw;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 18vw;
+    }
+    50% {
+        bottom: 18vw;
+    }
+    60% {
+        bottom: 18vw;
+    }
+    100% {
+        bottom: 0.8vw;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -55vw;
+    }
+    to {
+        right: 100%;
+    }
+}
